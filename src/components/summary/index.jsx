@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { InfoContext } from "../../InfoContex";
+import { InfoContext } from "../../InfoContext";
 import { Container } from "./style";
 export function Summary() {
   const { infos } = useContext(InfoContext);

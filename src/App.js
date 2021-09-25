@@ -1,7 +1,7 @@
 import Ages from './components/infos';
 import { GlobalStyle } from './styles/global';
 import { makeServer } from './services/server';
-import {InfoProvider } from './InfoContex';
+import {InfoProvider } from './InfoContext';
 
 makeServer()
 

@@ -1,6 +1,6 @@
 import { useRef, useState, useContext } from "react";
 import { Container } from "./style";
-import { InfoContext } from "../../InfoContex";
+import { InfoContext } from "../../InfoContext";
 
 export function NewAge() {
   const { createInfo } = useContext(InfoContext);
@@ -20,7 +20,6 @@ export function NewAge() {
       await createInfo(enteredName, enteredAge);
       setEnteredValuesIsValid(true);
     }
-  
   }
 
   return (
@@ -36,7 +35,7 @@ export function NewAge() {
         type="number"
         onChange={(event) => setEnteredAge(event.target.value)}
       />
-      {!enteredValuesIsValid && <p>Please, enter all values.</p>}
+      {!enteredValuesIsValid && <p data-testid="p">Please, enter all values.</p>}
       <button type="submit"> + </button>
     </Container>
   );
