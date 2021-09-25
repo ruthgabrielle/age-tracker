@@ -1,4 +1,4 @@
-import { NewAge } from '../newAge'
+import { NewAge } from '../newInfo'
 import { Summary } from '../summary'
 import { AgeTable} from '../table'
 

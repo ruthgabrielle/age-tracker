@@ -1,11 +1,15 @@
-import Ages from './components/ages';
+import Ages from './components/infos';
 import { GlobalStyle } from './styles/global';
+import { makeServer } from './services/server';
+import {InfoProvider } from './InfoContex';
+
+makeServer()
 
 export function App() {
   return (
-    <div className="App">
+    <InfoProvider>
      <Ages />
      <GlobalStyle />
-    </div>
+    </InfoProvider>
   );
 }

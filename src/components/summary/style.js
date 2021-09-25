@@ -10,7 +10,7 @@ div {
     background: var(--shape);
     padding: 1.5rem 2rem;
     border-radius: 0.25rem;
-    color: var(--text-tile)
+    color: var(--text-title)
 }
 
 header {

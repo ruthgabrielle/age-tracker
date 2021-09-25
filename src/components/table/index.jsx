@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { InfoContext } from "../../InfoContex";
 import { Container } from "./styles";
 
 export function AgeTable() {
+  const {infos} = useContext(InfoContext)
+
   return (
     <Container>
       <table>
@@ -11,18 +15,12 @@ export function AgeTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Ruth</td>
-            <td>18 </td>
-          </tr>
-          <tr>
-            <td>Ruth</td>
-            <td>18 </td>
-          </tr>
-          <tr>
-            <td>Ruth</td>
-            <td>18 </td>
-          </tr>
+          {infos.map((info) => (
+            <tr key={info.id}>
+              <td>{info.firstName}</td>
+              <td>{parseFloat(info.age)}</td>
+              </tr>
+          ))}
         </tbody>
       </table>
     </Container>
