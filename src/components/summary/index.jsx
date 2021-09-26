@@ -5,7 +5,6 @@ import { AgeTracker } from "../../AgeTracker";
 
 export function Summary() {
   const { infos } = useContext(InfoContext);
-  console.log(infos);
   const agesArray = infos.map((info) => {
     return {
       age: info.age,

@@ -11,10 +11,6 @@ export class AgeTracker {
       return parseFloat(infoAge.age);
     });
 
-    get Soma() {
-      return this.ageSum();
-    }
-
     get Highest() {
       return this.ageHighest();
     }
