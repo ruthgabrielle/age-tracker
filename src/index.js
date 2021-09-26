@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import {App} from './App';
 import { makeServer} from "./services/server"
 
-makeServer();
+if(process.env.NODE_ENV){
+  makeServer();
+}
 
 ReactDOM.render(
   <React.StrictMode>
