@@ -11,9 +11,9 @@ let server = new Server({
   seeds(server){
     server.db.loadData({
       infos: [
-        { "id": "1", "firstName": "Ruth Gomes", "age": 22 },
-        { "id": "2", "firstName": "Sarah Frozen", "age": 25 },
-        { "id": "3", "firstName": "Artur Veiga", "age": 30 }
+        { "id": "1", "firstName": "Ruth", "age": 22 },
+        { "id": "2", "firstName": "Sarah", "age": 25 },
+        { "id": "3", "firstName": "Artur", "age": 30 }
       ]
     })
   },
