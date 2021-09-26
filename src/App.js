@@ -1,14 +1,14 @@
-import Ages from './components/infos';
 import { GlobalStyle } from './styles/global';
 import { makeServer } from './services/server';
-import {InfoProvider } from './InfoContext';
+import {InfoProvider } from './hooks/InfoContext';
+import Infos from './pages/infos';
 
 makeServer()
 
 export function App() {
   return (
     <InfoProvider>
-     <Ages />
+     <Infos />
      <GlobalStyle />
     </InfoProvider>
   );

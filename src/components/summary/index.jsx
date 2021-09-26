@@ -1,6 +1,8 @@
 import { useContext } from "react";
-import { InfoContext } from "../../InfoContext";
+import { InfoContext } from "../../hooks/InfoContext";
 import { Container } from "./style";
+import { AgeTracker } from "../../AgeTracker";
+
 export function Summary() {
   const { infos } = useContext(InfoContext);
   console.log(infos);
@@ -9,50 +11,7 @@ export function Summary() {
       age: info.age,
     };
   });
-
-  class AgeTracker {
-    constructor(ages) {
-      this.ages = ages;
-    }
-
-    mapAges = agesArray.map((infoAge) => {
-      return parseFloat(infoAge.age);
-    });
-
-    get Soma() {
-      return this.ageSum();
-    }
-
-    get Highest() {
-      return this.ageHighest();
-    }
-
-    get Lowest() {
-      return this.ageLowest();
-    }
-
-    get Average() {
-      return this.ageAvg();
-    }
-
-
-    ageAvg() {
-      const sum = this.mapAges.reduce((a, b) => a + b, 0);
-      const avg = (sum / this.mapAges.length) || 0
-      return avg
-    }
-
-    ageHighest() {
-      const highestAge = Math.max(...this.mapAges)
-      return highestAge;
-    }
-
-    ageLowest() {
-      const lowestAge = Math.min(...this.mapAges)
-      return lowestAge;
-    }
-  }
-
+  
   const ageMethExecute = new AgeTracker(agesArray);
 
   return (

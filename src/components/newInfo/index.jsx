@@ -1,8 +1,8 @@
 import { useRef, useState, useContext } from "react";
 import { Container } from "./style";
-import { InfoContext } from "../../InfoContext";
+import { InfoContext } from "../../hooks/InfoContext";
 
-export function NewAge() {
+export function NewInfo() {
   const { createInfo } = useContext(InfoContext);
   const nameInputRef = useRef();
   const [enteredName, setEnteredName] = useState("");

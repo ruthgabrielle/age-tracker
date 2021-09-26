@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { InfoContext } from "../../InfoContext";
+import { InfoContext } from "../../hooks/InfoContext";
 import { Container } from "./styles";
 
-export function AgeTable() {
+export function InfoTable() {
   const {infos} = useContext(InfoContext)
 
   return (
