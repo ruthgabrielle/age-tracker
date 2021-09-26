@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {App} from './App';
 import { makeServer} from "./services/server"
 
-if(process.env.NODE_ENV){
+if(process.env.NODE_ENV === 'development'){
   makeServer();
 }
 
